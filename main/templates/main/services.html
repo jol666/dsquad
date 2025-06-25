@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container ">
+    <div class="text-center mb-5">
+        <h2 class="text-orange">Our Services</h2>
+        <p class="text-light">Premium car detailing services designed to revive, protect, and beautify your ride.</p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Service Card 1 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/ppf.png' %}" class="img-fluid" alt="PPF">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Paint Protection Film (PPF)</h5>
+                    <p>Why PPF is a must-have:.</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            <li>Self-healing – scratches disappear with heat</li>
+                            <li>Impact-resistant – protects against chips</li>
+                            <li>UV filtering – preserves paint color</li>
+                            <li>Gloss or matte finish options</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/Borophene.png' %}" class="img-fluid" alt="Borophene">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Borophene Coating (Exclusive)</h5>
+                    <p>What makes it extraordinary?.</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            <li>Ultimate scratch and corrosion resistance</li>
+                            <li>Superior adhesion and hydrophobic properties</li>
+                            <li>Incredible thermal and chemical resistance</li>
+                            <li>Extended lifespan of the coating (up to 7+ years)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/Graphene.png' %}" class="img-fluid" alt="Graphene">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Graphene Coating</h5>
+                    <p>Why choose graphene?</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            <li>Anti-static and dust-repellent properties</li>
+                            <li>Extreme heat resistance (ideal for Indian summers)</li>
+                            <li>Longer durability than ceramic coatings</li>
+                            <li>Unbeatable slickness and gloss</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/ceramic.png' %}" class="img-fluid" alt="Ceramic">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Ceramic Coating</h5>
+                    <p>This invisible armor defends against:</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            
+                            <li>UV rays that dull and fade paint over time</li>
+                            <li>Bird droppings, tree sap, and acid rain</li>
+                            <li>Light scratches and swirl marks</li>
+                            <li>Hard water stains and chemical etching</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/Premium.png' %}" class="img-fluid" alt="Accessories">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Premium Car Accessories</h5>
+                    <p>Popular accessories:.</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            <li>Ambient lighting & infotainment upgrades</li>
+                            <li>Custom alloy wheels & spoilerss</li>
+                            <li>Dashcams, mobile holders, parking sensors</li>
+                            <li>Luxury mats, organizers & body kits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="col-md-4">
+            <div class="service-card position-relative overflow-hidden rounded">
+                <img src="{% static 'main/images/Interior.png' %}" class="img-fluid" alt="Interior">
+                <div class="service-overlay p-3">
+                    <h5 class="text-orange">Interior Colour Conversion</h5>
+                    <p>Key highlights:.</p>
+                    <div class="hover-details">
+                        <ul class="text-white">
+                            <li>Custom leather and fabric upgrades</li>
+                            <li>OEM finish with premium craftsmanship</li>
+                            <li>Dash and console color wrapping</li>
+                            <li>Stitching and detailing to match your vibe</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

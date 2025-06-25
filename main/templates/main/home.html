@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="homepage-bg">
+    <!-- Hero Section -->
+    <section class="hero-solid d-flex justify-content-center align-items-center text-center text-white mt-0">
+        <div>
+            <h1 class="display-4 fw-bold text-orange">DETAILING YOUR DREAMS</h1>
+            <p class="lead">ONE STOP. ONE SQUAD.</p>
+        </div>
+    </section>
+
+   <!-- Reel + About Section -->
+<section class="container ">
+    <div class="row align-items-center">
+        <!-- Left: Carousel -->
+        <div class="col-md-5 d-flex justify-content-center align-items-center">
+            <div class="w-100" style="max-width: 300px;">
+                <div id="reelCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded shadow">
+
+                        <div class="carousel-item active position-relative">
+                            <div class="video-wrapper">
+                                <div class="video-overlay"></div>
+                                <video src="{% static 'main/videos/reel1.mp4' %}" class="d-block w-100" autoplay loop muted playsinline></video>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item position-relative">
+                            <div class="video-wrapper">
+                                <div class="video-overlay"></div>
+                                <video src="{% static 'main/videos/reel2.mp4' %}" class="d-block w-100" autoplay loop muted playsinline></video>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item position-relative">
+                            <div class="video-wrapper">
+                                <div class="video-overlay"></div>
+                                <video src="{% static 'main/videos/reel3.mp4' %}" class="d-block w-100" autoplay loop muted playsinline></video>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item position-relative">
+                            <div class="video-wrapper">
+                                <div class="video-overlay"></div>
+                                <video src="{% static 'main/videos/reel4.mp4' %}" class="d-block w-100" autoplay loop muted playsinline></video>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#reelCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#reelCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            <!-- Right: About Text -->
+            <div class="col-md-6 about-section-bg text-white p-4">
+                <h2 class="text-orange mb-3">Our Work in Action</h2>
+                <p class="dtl">
+                    With over 7 years of experience in detailing and automotive enhancement, D-Squad takes pride in delivering unmatched surface protection and stunning finishes.
+                    <br><br>
+                    From ceramic coatings to premium accessories, what you see in action here reflects our obsession with perfection. Every car we touch gets treated like it’s our own.
+                    <br><br>
+                    Watch how we turn ordinary rides into showroom-ready machines!
+                </p>
+                <div class="text-center">
+                    <h2 class="text-orange mb-3">Why Choose Us?</h2>
+                    <p>World-class products, tested for Indian roads. Skilled professionals trained in modern techniques. State-of-the-art facility with climate-controlled bays. Transparent service, personalized care, and consistent results. Every product and process we use is designed to deliver unrivaled shine, protection, and value. Whether it’s a new car or your beloved ride, D-Squad ensures it gets the attention it deserves.</p>
+                </div>    
+                <a href="{% url 'services' %}" class="btn btn-orange mt-3 px-4 py-2">Explore Services</a> 
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

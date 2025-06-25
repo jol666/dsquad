@@ -1,0 +1,225 @@
+/* static/main/css/style.css */
+
+body {
+    /*background-color: #000;*/
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+.text-orange {
+    color: #ff6600 !important;
+    
+}
+/*.navbar-brand  {
+    color: #ff6600 !important;
+    font-weight: bold;
+    font-family: 'VisitorTT2', monospace;
+    font-size: 1.5rem;
+}*/
+
+
+
+.bg-dark {
+    background-color: #111 !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+
+.nav-link:hover {
+    color: #ff6600 !important;
+}
+.lead {
+    font-weight: bold;
+    font-family: 'VisitorTT2', monospace;
+}
+.btn-orange {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #ffffff;
+    color: #ff6600;
+}
+/* home */
+.homepage-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/main/images/about.png'); /* Update path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.hero-solid {
+    padding-top: 00px;
+    
+}
+/*.hero-video-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video-container video {
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 20px;
+}
+
+*/
+
+.overlay-text {
+    z-index: 2;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'VisitorTT2';
+    src: url('/static/main/fonts/visitor2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  
+
+/* services */
+.service-card {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease;
+  }
+  
+  .service-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .service-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .service-overlay h5,
+  .service-overlay p {
+    margin: 0;
+  }
+  
+  .hover-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+  }
+  
+  .service-card:hover .hover-details {
+    opacity: 1;
+    max-height: 200px;
+  }
+
+  .carousel-item video {
+    height: 550px;
+    max-width: fit-content;
+    
+}
+.carousel-inner  {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* adjust for darker/lighter */
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+/*.carousel-control-next-icon{
+    margin-left: -600px;
+}
+.carousel-control-prev-icon{
+    margin-left: -50px;
+}*/
+.about-section-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/main/images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.reelCarousel{
+    max-width: fit-content;
+}
+/* contact */
+
+/* footer*/
+.footer a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+.footer i:hover {
+  color: #ff6600;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.footer i {
+    font-size: 1.2rem;
+}
+
+/* Ensure the content stretches and footer stays pinned */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body > .homepage-bg,
+body > main {
+    min-height: calc(100vh - 100px); /* adjust 100px based on navbar + footer height */
+}

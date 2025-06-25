@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success mt-3 text-center" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<section class="container ">
+    <h2 class="text-orange text-center mb-4">Get in Touch</h2>
+    <div class="row">
+        <!-- Contact Info -->
+        <div class="col-md-6 mb-4">
+            <h5 class="text-white">D Squad Detailing Studio</h5>
+            <p class="text-light">
+                📍 D Squad , Angamaly Railway Station bus stop,<br>
+                   NH 544 Angamaly, India 683572 Kerala<br>
+                📞 79949 88907 / 99471 08019<br>
+                ✉️ detailerssquad@gmail.com<br>
+                🕒 Mon - Sat: 9 AM – 6 PM
+            </p>
+
+            <!-- Optional: Google Maps -->
+            <div class="ratio ratio-16x9 rounded shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d245.43435086996058!2d76.3806404!3d10.1847474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807c353ec92a7%3A0x41f83d7be234e02a!2sD%20squad!5e0!3m2!1sen!2sin!4v1750745924501!5m2!1sen!2sin" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                        
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-6">
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label text-white">Name</label>
+                    <input type="text" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-white">Email</label>
+                    <input type="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-white">Phone</label>
+                    <input type="text" name="phone" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-white">Message</label>
+                    <textarea name="message" rows="5" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange px-4 py-2">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
