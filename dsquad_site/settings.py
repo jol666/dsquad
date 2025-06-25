@@ -155,3 +155,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, default='sqlite:///db.sqlite3')
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-d549.up.railway.app",
+    "https://www.yourcustomdomain.com",
+    "https://yourcustomdomain.com"
+]
