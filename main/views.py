@@ -16,11 +16,13 @@ def about(request):
     return render(request, 'main/about.html')
 
 
-from django.shortcuts import render, redirect
+
 from django.contrib import messages
+
+from django.shortcuts import render, redirect
 
 def contact(request):
     if request.method == 'POST':
-        return redirect('contact')
+        return redirect('contact')  # temporary
 
     return render(request, 'main/contact.html')
