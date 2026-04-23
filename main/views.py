@@ -15,8 +15,6 @@ def gallery(request):
 def about(request):
     return render(request, 'main/about.html')
 
-def contact(request):
-    return render(request, 'main/contact.html')
 
 from django.shortcuts import render, redirect
 from django.contrib import messages
