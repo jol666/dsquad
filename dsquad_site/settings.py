@@ -12,8 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -127,10 +126,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://dsquadd.com",
-    "https://*.railway.app",
-]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -139,6 +135,9 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -156,7 +155,22 @@ import os
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']  # for now; later replace with your domain
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    "dsquadd.com",
+    "www.dsquadd.com",
+    "web-production-d549.up.railway.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://dsquadd.com",
+    "https://www.dsquadd.com",
+    "https://web-production-d549.up.railway.app",
+]
+
+CSRF_COOKIE_SECURE = False   # test first
+SESSION_COOKIE_SECURE = False
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -166,8 +180,3 @@ DATABASES = {
     'default': dj_database_url.config(conn_max_age=600, default='sqlite:///db.sqlite3')
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://web-production-d549.up.railway.app",
-    "https://www.yourcustomdomain.com",
-    "https://yourcustomdomain.com"
-]
