@@ -140,6 +140,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'detailerssquad@gmail.com'  # your Gmail
 EMAIL_HOST_PASSWORD = 'qfit brnw cfpx bacx'  # the app password
+DEFAULT_FROM_EMAIL = 'detailerssquad@gmail.com'
 
 
 import dj_database_url
