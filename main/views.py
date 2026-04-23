@@ -25,6 +25,10 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
+from django.core.mail import send_mail
+from django.contrib import messages
+from django.shortcuts import render, redirect
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -33,25 +37,28 @@ def contact(request):
         message = request.POST.get('message')
 
         full_message = f"""
-        New Contact Enquiry from D Squad Website:
+New Contact Enquiry from D Squad Website:
 
-        Name: {name}
-        Email: {email}
-        Phone: {phone}
-        Message:
-        {message}
-        """
+Name: {name}
+Email: {email}
+Phone: {phone}
+Message:
+{message}
+"""
 
-        send_mail(
-            subject="New Enquiry - D Squad",
-            message=full_message,
-            from_email='detailerssquad@gmail.com',
-            recipient_list=['detailerssquad@gmail.com'],  # your receiving email
-            fail_silently=False,
-        )
+        try:
+            send_mail(
+                subject="New Enquiry - D Squad",
+                message=full_message,
+                from_email='detailerssquad@gmail.com',
+                recipient_list=['detailerssquad@gmail.com'],
+                fail_silently=False,
+            )
+            messages.success(request, "Your message has been sent successfully!")
+        except Exception as e:
+            print(e)  # check Railway logs
+            messages.error(request, "Something went wrong. Try again later.")
 
-        messages.success(request, "Your message has been sent successfully!")
         return redirect('contact')
 
     return render(request, 'main/contact.html')
-
