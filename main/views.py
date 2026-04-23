@@ -45,7 +45,7 @@ def contact(request):
         send_mail(
             subject="New Enquiry - D Squad",
             message=full_message,
-            from_email=email,
+            from_email='detailerssquad@gmail.com',
             recipient_list=['detailerssquad@gmail.com'],  # your receiving email
             fail_silently=False,
         )
