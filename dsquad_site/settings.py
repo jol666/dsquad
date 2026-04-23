@@ -136,6 +136,20 @@ USE_TZ = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+ALLOWED_HOSTS = [
+    "dsquadd.com",
+    "www.dsquadd.com",
+    "web-production-d549.up.railway.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://dsquadd.com",
+    "https://www.dsquadd.com",
+    "https://web-production-d549.up.railway.app",
+]
+
+CSRF_COOKIE_SECURE = False   # test first
+SESSION_COOKIE_SECURE = False
 
 
 
@@ -157,20 +171,6 @@ DEBUG = False
 
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    "dsquadd.com",
-    "www.dsquadd.com",
-    "web-production-d549.up.railway.app",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://dsquadd.com",
-    "https://www.dsquadd.com",
-    "https://web-production-d549.up.railway.app",
-]
-
-CSRF_COOKIE_SECURE = False   # test first
-SESSION_COOKIE_SECURE = False
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
