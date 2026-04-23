@@ -223,3 +223,38 @@ body > .homepage-bg,
 body > main {
     min-height: calc(100vh - 100px); /* adjust 100px based on navbar + footer height */
 }
+
+/* Background for right section */
+.about-section-bg {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+/* Orange theme color */
+.text-orange {
+    color: #ff6a00;
+}
+
+/* Paragraph styling */
+.dtl {
+    color: #ddd;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Button styling */
+.btn-orange {
+    background-color: #ff6a00;
+    color: #fff;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #e65c00;
+    color: #fff;
+}
+.about-section-bg {
+    backdrop-filter: blur(6px); /* glass effect */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
